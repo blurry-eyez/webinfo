@@ -1,53 +1,98 @@
-body, html {
+/* Base reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
   height: 100%;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Great Vibes', cursive;
+  color: white;
+  background: url('bg.jpg') no-repeat center center / cover;
 }
 
-body {
-  background-color: #000;
-  background-image: url('bg.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
- .overlay {
+/* Overlay with dark tint */
+.overlay {
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2); /* optional dark overlay */
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
+/* Countdown box */
 #countdown-box {
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 20px;
-  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 25px 30px;
+  border-radius: 20px;
   text-align: center;
-  color: white;
+  backdrop-filter: blur(10px);
+  font-size: 24px;
+}
+
+/* Countdown timer */
+#countdown {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.time-box {
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 10px 15px;
+  border-radius: 12px;
   font-size: 20px;
+  min-width: 60px;
+}
+
+.time-box span {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.time-box small {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Birthday view after countdown */
+#birthday-view {
+  background: url('bg2.jpg') no-repeat center center / cover;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.birthday-box {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
   backdrop-filter: blur(10px);
 }
 
-#countdown {
-  font-size: 32px;
-  margin-top: 15px;
+.birthday-box h1 {
+  font-size: 36px;
+  margin-bottom: 25px;
 }
 
-#happy-birthday {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-}
-
-#happy-birthday img {
-  width: 200px;
-  height: auto;
+.download-btn {
   margin-top: 20px;
-  border-radius: 10px;
+  padding: 12px 25px;
+  background-color: #fff;
+  color: #000;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #ddd;
 }
