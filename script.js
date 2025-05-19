@@ -28,7 +28,7 @@ const interval = setInterval(() => {
 
 function showBirthdayMessage() {
   // Change background image
-  document.body.style.backgroundImage = url ('sakshi.jpg');
+  document.body.style.backgroundImage = url('sakshi.jpg');
 
   // Optional: remove or hide overlay if it interferes
  /* const overlays = document.querySelectorAll('.overlay');
