@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>IAS Sakshi Birthday Countdown</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="overlay" style="background: url('bg.jpg') no-repeat center center / cover;">
-   <div class="overlay">
+  <div class="overlay" id="main-overlay">
     <div id="countdown-box">
-      <h2 id="message">Countdown to Sakshi's Birthday</h2>
+      <h1 id="message">Countdown to Sakshi's Birthday</h1>
       <div id="countdown">
-        <span id="days"></span> days 
-        <span id="hours"></span> hours 
-        <span id="minutes"></span> mins 
-        <span id="seconds"></span> secs
+        <div class="time-box"><span id="days"></span><small>Days</small></div>
+        <div class="time-box"><span id="hours"></span><small>Hours</small></div>
+        <div class="time-box"><span id="minutes"></span><small>Mins</small></div>
+        <div class="time-box"><span id="seconds"></span><small>Secs</small></div>
       </div>
     </div>
   </div>
