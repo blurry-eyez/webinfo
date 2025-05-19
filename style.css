@@ -1,0 +1,53 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #000;
+  background-image: url('bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* optional dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#countdown-box {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  backdrop-filter: blur(10px);
+}
+
+#countdown {
+  font-size: 32px;
+  margin-top: 15px;
+}
+
+#happy-birthday {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+#happy-birthday img {
+  width: 200px;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+}
