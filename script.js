@@ -36,7 +36,7 @@ function showBirthdayView() {
   birthdayView.innerHTML = `
     <div class="birthday-box">
       <h1>🎉 Happy Birthday IAS Sakshi 🎉</h1>
-      <a href="letter.pdf" download class="download-btn">Open Letter</a>
+      <a href="https://raw.githubusercontent.com/blurry-eyez/test/main/letter.pdf" download class="download-btn">Open Letter</a>
     </div>
   `;
 
