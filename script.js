@@ -27,6 +27,14 @@ const interval = setInterval(() => {
 }, 1000);
 
 function showBirthdayMessage() {
+  // Change background image
+  document.body.style.backgroundImage = "url('sakshi.jpg')";
+
+  // Optional: remove or hide overlay if it interferes
+  const overlays = document.querySelectorAll('.overlay');
+  overlays.forEach(overlay => overlay.style.backgroundColor = 'transparent');
+
+  // Update content
   countdownBox.innerHTML = `
     <h1>🎉 Happy Birthday IAS Sakshi 🎉</h1>
     <div id="happy-birthday">
@@ -34,3 +42,4 @@ function showBirthdayMessage() {
     </div>
   `;
 }
+
