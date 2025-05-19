@@ -31,8 +31,8 @@ function showBirthdayMessage() {
   document.body.style.backgroundImage = "url('sakshi.jpg')";
 
   // Optional: remove or hide overlay if it interferes
-  const overlays = document.querySelectorAll('.overlay');
-  overlays.forEach(overlay => overlay.style.backgroundColor = 'transparent');
+ /* const overlays = document.querySelectorAll('.overlay');
+  overlays.forEach(overlay => overlay.style.backgroundColor = 'transparent');  */
 
   // Update content
   countdownBox.innerHTML = `
