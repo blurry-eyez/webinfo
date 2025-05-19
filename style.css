@@ -14,13 +14,13 @@ body {
   background-attachment: fixed;
 }
 
-/* .overlay {
+ .overlay {
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* optional dark overlay 
+  background-color: rgba(0, 0, 0, 0.2); /* optional dark overlay */
   display: flex;
   justify-content: center;
-  align-items: center; */ 
+  align-items: center; 
 }
 
 #countdown-box {
