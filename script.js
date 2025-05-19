@@ -1,5 +1,5 @@
 // Set birthday date (YYYY-MM-DD)
-const birthday = new Date("2025-05-21T00:00:00").getTime();
+const birthday = new Date("2025-05-19T00:00:00").getTime();
 
 const countdownBox = document.getElementById("countdown-box");
 const overlay = document.getElementById("main-overlay");
