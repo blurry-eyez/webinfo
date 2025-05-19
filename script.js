@@ -1,9 +1,8 @@
-// Set your birthday date here (YYYY-MM-DD)
-const birthday = new Date("2025-05-19T12:20:00").getTime();
+// Set birthday date (YYYY-MM-DD)
+const birthday = new Date("2025-05-21T00:00:00").getTime();
 
 const countdownBox = document.getElementById("countdown-box");
-const countdown = document.getElementById("countdown");
-const message = document.getElementById("message");
+const overlay = document.getElementById("main-overlay");
 
 const interval = setInterval(() => {
   const now = new Date().getTime();
@@ -11,7 +10,7 @@ const interval = setInterval(() => {
 
   if (diff <= 0) {
     clearInterval(interval);
-    showBirthdayMessage();
+    showBirthdayView();
     return;
   }
 
@@ -26,20 +25,20 @@ const interval = setInterval(() => {
   document.getElementById("seconds").textContent = seconds;
 }, 1000);
 
-function showBirthdayMessage() {
-  // Change background image
-  document.body.style.backgroundImage = "url('sakshi.jpg')";
+function showBirthdayView() {
+  // Remove old overlay
+  overlay.remove();
 
-  // Optional: remove or hide overlay if it interferes
- /* const overlays = document.querySelectorAll('.overlay');
-  overlays.forEach(overlay => overlay.style.backgroundColor = 'transparent');  */
+  // Create birthday screen
+  const birthdayView = document.createElement('div');
+  birthdayView.id = 'birthday-view';
 
-  // Update content
-  countdownBox.innerHTML = `
-    <h2>🎉 Happy Birthday IAS Sakshi 🎉</h2>
-    <div id="happy-birthday">
-      <img src="sakshi.jpg" alt="IAS Sakshi">
+  birthdayView.innerHTML = `
+    <div class="birthday-box">
+      <h1>🎉 Happy Birthday IAS Sakshi 🎉</h1>
+      <a href="letter.pdf" download class="download-btn">Open Letter</a>
     </div>
   `;
-}
 
+  document.body.appendChild(birthdayView);
+}
