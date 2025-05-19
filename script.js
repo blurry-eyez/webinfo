@@ -36,7 +36,7 @@ function showBirthdayMessage() {
 
   // Update content
   countdownBox.innerHTML = `
-    <h1>🎉 Happy Birthday IAS Sakshi 🎉</h1>
+    <h2>🎉 Happy Birthday IAS Sakshi 🎉</h2>
     <div id="happy-birthday">
       <img src="sakshi.jpg" alt="IAS Sakshi">
     </div>
