@@ -9,17 +9,13 @@
       margin: 0;
       padding: 0;
       font-family: "Segoe UI", sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       height: 100vh;
       background: url('bg.jpg') no-repeat center center/cover;
       color: #f1f5f9;
       position: relative;
     }
 
-    /* Stronger background dimming */
+    /* Strong background dim */
     body::before {
       content: "";
       position: absolute;
@@ -27,21 +23,24 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.7); /* Increased darkness */
+      background-color: rgba(0, 0, 0, 0.7);
       z-index: 0;
     }
 
-    .header,
-    .links {
+    .container {
       position: relative;
       z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 30px;
     }
 
     .header {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 15px;
-      margin-bottom: 10px;
     }
 
     .header img {
@@ -58,7 +57,7 @@
     }
 
     .header h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin: 0;
       padding-left: 10px;
     }
@@ -67,12 +66,18 @@
       width: 80%;
       height: 1px;
       background-color: white;
-      margin: 20px auto;
+      margin: 15px auto 40px auto;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .links a {
       display: block;
-      background: rgba(255, 255, 255, 0.1); /* translucent */
+      background: rgba(255, 255, 255, 0.1);
       color: #f8fafc;
       text-decoration: none;
       padding: 15px 30px;
@@ -81,7 +86,7 @@
       width: 250px;
       text-align: center;
       font-size: 1.1rem;
-      backdrop-filter: blur(10px); /* blur effect */
+      backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.2);
       transition: background 0.3s ease, color 0.3s ease;
@@ -94,19 +99,21 @@
   </style>
 </head>
 <body>
-  <div class="header">
-    <img src="logo.jpg" alt="Logo" />
-    <div class="divider-vertical"></div>
-    <h1>Prem Tilokani</h1>
-  </div>
+  <div class="container">
+    <div class="header">
+      <img src="logo.jpg" alt="Logo" />
+      <div class="divider-vertical"></div>
+      <h1>Prem Tilokani</h1>
+    </div>
 
-  <div class="divider-horizontal"></div>
+    <div class="divider-horizontal"></div>
 
-  <div class="links">
-    <a href="https://instagram.com/prem_tilokani" target="_blank">Instagram</a>
-    <a href="https://www.linkedin.com/in/prem-tilokani-8b85b624b" target="_blank">LinkedIn</a>
-    <a href="https://github.com/blurry-eyez" target="_blank">GitHub</a>
-    <a href="https://www.snapchat.com/add/prem.3618" target="_blank">Snapchat</a>
+    <div class="links">
+      <a href="https://instagram.com/prem_tilokani" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/in/prem-tilokani-8b85b624b" target="_blank">LinkedIn</a>
+      <a href="https://github.com/blurry-eyez" target="_blank">GitHub</a>
+      <a href="https://www.snapchat.com/add/prem.3618" target="_blank">Snapchat</a>
+    </div>
   </div>
 </body>
 </html>
