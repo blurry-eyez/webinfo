@@ -19,7 +19,7 @@
       position: relative;
     }
 
-    /* Dark overlay for readability */
+    /* Stronger background dimming */
     body::before {
       content: "";
       position: absolute;
@@ -27,7 +27,7 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.7); /* Increased darkness */
       z-index: 0;
     }
 
@@ -41,7 +41,7 @@
       display: flex;
       align-items: center;
       gap: 15px;
-      margin-bottom: 40px;
+      margin-bottom: 10px;
     }
 
     .header img {
@@ -51,15 +51,29 @@
       object-fit: cover;
     }
 
-    h1 {
+    .divider-vertical {
+      width: 1px;
+      height: 40px;
+      background-color: white;
+    }
+
+    .header h1 {
       font-size: 2.5rem;
       margin: 0;
+      padding-left: 10px;
+    }
+
+    .divider-horizontal {
+      width: 80%;
+      height: 1px;
+      background-color: white;
+      margin: 20px auto;
     }
 
     .links a {
       display: block;
-      background: #fff;
-      color: #1e293b;
+      background: rgba(255, 255, 255, 0.1); /* translucent */
+      color: #f8fafc;
       text-decoration: none;
       padding: 15px 30px;
       margin: 10px 0;
@@ -67,11 +81,14 @@
       width: 250px;
       text-align: center;
       font-size: 1.1rem;
+      backdrop-filter: blur(10px); /* blur effect */
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       transition: background 0.3s ease, color 0.3s ease;
     }
 
     .links a:hover {
-      background: #2563eb;
+      background: rgba(37, 99, 235, 0.8);
       color: #fff;
     }
   </style>
@@ -79,8 +96,11 @@
 <body>
   <div class="header">
     <img src="logo.jpg" alt="Logo" />
+    <div class="divider-vertical"></div>
     <h1>Prem Tilokani</h1>
   </div>
+
+  <div class="divider-horizontal"></div>
 
   <div class="links">
     <a href="https://instagram.com/prem_tilokani" target="_blank">Instagram</a>
