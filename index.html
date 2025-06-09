@@ -15,7 +15,7 @@
       position: relative;
     }
 
-    /* Strong background dim */
+    /* Darken background */
     body::before {
       content: "";
       position: absolute;
@@ -27,20 +27,13 @@
       z-index: 0;
     }
 
-    .container {
+    .header {
       position: relative;
       z-index: 1;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 30px;
-    }
-
-    .header {
-      display: flex;
       align-items: center;
       justify-content: center;
-      gap: 15px;
+      padding: 30px 0 10px 0;
     }
 
     .header img {
@@ -54,19 +47,30 @@
       width: 1px;
       height: 40px;
       background-color: white;
+      margin: 0 15px;
     }
 
     .header h1 {
       font-size: 2rem;
       margin: 0;
-      padding-left: 10px;
     }
 
     .divider-horizontal {
       width: 80%;
       height: 1px;
       background-color: white;
-      margin: 15px auto 40px auto;
+      margin: 10px auto 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .links-wrapper {
+      height: calc(100vh - 150px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
     }
 
     .links {
@@ -99,15 +103,15 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <img src="logo.jpg" alt="Logo" />
-      <div class="divider-vertical"></div>
-      <h1>Prem Tilokani</h1>
-    </div>
+  <div class="header">
+    <img src="logo.jpg" alt="Logo" />
+    <div class="divider-vertical"></div>
+    <h1>Prem Tilokani</h1>
+  </div>
 
-    <div class="divider-horizontal"></div>
+  <div class="divider-horizontal"></div>
 
+  <div class="links-wrapper">
     <div class="links">
       <a href="https://instagram.com/prem_tilokani" target="_blank">Instagram</a>
       <a href="https://www.linkedin.com/in/prem-tilokani-8b85b624b" target="_blank">LinkedIn</a>
