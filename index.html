@@ -15,7 +15,6 @@
       position: relative;
     }
 
-    /* Darken background */
     body::before {
       content: "";
       position: absolute;
@@ -65,10 +64,12 @@
     }
 
     .links-wrapper {
-      height: calc(100vh - 150px);
+      min-height: calc(100vh - 150px);
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      padding-top: 40px;
       position: relative;
       z-index: 1;
     }
@@ -98,7 +99,36 @@
 
     .links a:hover {
       background: rgba(255, 255, 255, 0.9);
-      color: #111827; /* dark text on hover */
+      color: #111827;
+    }
+
+    /* Anime Section */
+    .anime-section {
+      margin-top: 50px;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .anime-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .anime-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      text-align: center;
+      margin: auto;
+      max-width: 500px;
+    }
+
+    .anime-card p {
+      margin: 8px 0;
+      font-size: 1rem;
     }
   </style>
 </head>
@@ -117,7 +147,19 @@
       <a href="https://www.linkedin.com/in/prem-tilokani-8b85b624b" target="_blank">LinkedIn</a>
       <a href="https://github.com/blurry-eyez" target="_blank">GitHub</a>
       <a href="https://www.snapchat.com/add/prem.3618" target="_blank">Snapchat</a>
-      <a href="https://wa.me/916351929739" target="_blank">WhatsApp</a> <!-- Change the number -->
+      <a href="https://wa.me/916351929739" target="_blank">WhatsApp</a>
+    </div>
+
+    <!-- Anime Section -->
+    <div class="anime-section">
+      <h2>Anime 🎬</h2>
+      <div class="anime-card">
+        <p><strong>Total Watched:</strong> 500+ series</p>
+        <p><strong>Last Logged:</strong> Dec 2022</p>
+        <p><strong>Favourite Genres:</strong> Action, Romance, Isekai</p>
+        <p><strong>Watcher Level:</strong> Veteran / Hardcore</p>
+        <p><em>"Living multiple lives through anime worlds."</em></p>
+      </div>
     </div>
   </div>
 </body>
